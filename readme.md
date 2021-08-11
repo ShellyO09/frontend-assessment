@@ -1,3 +1,18 @@
+
+ 
+ Exercise 1
+    ・Needs Local Web Server to run
+    ・Use bootstrap
+ Exercise 2
+    ・Needs Local Web Server to run
+    ・Get data.json using HTML5 and Javascript
+
+Exercise1 and 2 folders are located in the exercise 1 and exercise 2 folder. Thanks.
+
+
+
+Original Message
+----------------------------------------------------
 Introduction
 ---
 Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
