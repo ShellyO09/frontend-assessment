@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', function(){
     /* =================================================== */
     // Tab
     /* =================================================== */
-            var req = new XMLHttpRequest(); // XMLHttpRequest-- create object
+            let req = new XMLHttpRequest(); // XMLHttpRequest-- create object
             req.onreadystatechange = function() { // XMLHttpRequest--Event handler called when the state of an object changes
             if(req.readyState == 4 && req.status == 200){ // When the response from the server is completed or successed
-            var data = JSON.parse(req.responseText); // Put JSON file data into variable 
-            var len = data.length; // Get JSON data length
-            var window_size=window.innerWidth;
+            let data = JSON.parse(req.responseText); // Put JSON file data into letiable 
+            let len = data.length; // Get JSON data length
+            let window_size=window.innerWidth;
             
-            for(var i=0; i<len; i++) {
+            for(let i=0; i<len; i=(i+1)|0) {
                 let title=(data[i].title);
                 let content=(data[i].content);
-                var li = document.createElement('li');
-                var div = document.createElement('div');
+                let li = document.createElement('li');
+                let div = document.createElement('div');
                 li.textContent = title;                
                 div.textContent = content;
                 li.classList.add("tab");
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
             // add click event 
             const tabs = document.getElementsByClassName('tab');
-            for(let i = 0; i < tabs.length; i++) {
+            for(let i = 0; i < tabs.length; i=(i+1)|0) {
                 tabs[i].addEventListener('click', tabSwitch);
             }
     
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
                 
                 //Check if there is any other tab is open
-                for(let i = 0; i < tabs.length; i++) {
-                    var tabActive=(tabs[i].classList.contains('is-active')) == true;
+                for(let i = 0; i < tabs.length; i=(i+1)|0) {
+                    let tabActive=(tabs[i].classList.contains('is-active')) == true;
                         if(tabActive && i!=index){
                          tabs[i].classList.remove('is-active');
                          document.getElementsByClassName('panel')[i].classList.remove('is-show');
